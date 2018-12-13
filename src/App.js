@@ -9,8 +9,13 @@ class App extends React.Component {
   };
 
   changeHobby = () => {
-    this.state.hobby = this.state.hobby === 'do nothing' ? 'run away from reality' : 'do nothing';
-    console.log(this.state.hobby);
+    const {hobby} = this.state;
+    this.setState({
+      hobby: hobby === 'do nothing' ? 'run away from reality' : 'do nothing'
+    });
+
+    // empty object passed in setState parameter also cause re-render
+    // this.setState({});
   };
 
   render() {
@@ -26,6 +31,7 @@ class App extends React.Component {
       </div>
     );
   }
+
 }
 
 App.propTypes = {
