@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Profile from "./Profile";
+import Occupation from "./Occupation";
 
 class App extends React.Component {
 
@@ -22,7 +23,9 @@ class App extends React.Component {
     console.log('rendered App.js');
     return (
       <div className="App">
-        <Profile name={'Sidki'} greeting={'Hello World!'} hobby={this.state.hobby} onChangeHobby={this.changeHobby}/>
+        <Profile name={'Sidki'} greeting={'Hello World!'} hobby={this.state.hobby} onChangeHobby={this.changeHobby}>
+          <Occupation industry={'Steel Manufacturer'}/>
+        </Profile>
       </div>
     );
   }
