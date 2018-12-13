@@ -2,7 +2,12 @@ import React from 'react';
 
 class InputX extends React.Component {
   render() {
-    return <input onChange={this.props.onChange}/>;
+    return (
+      <>
+        <p>Input x:</p>
+        <input ref={'insideInputX'} onChange={this.props.onChange}/>
+      </>
+    );
   }
 }
 

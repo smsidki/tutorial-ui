@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import InputX from "./InputX";
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
 
@@ -12,7 +11,7 @@ class App extends React.Component {
 
   displayInputValues = () => {
     this.setState({
-      x: ReactDOM.findDOMNode(this.x).value,
+      x: this.x.refs.insideInputX.value,
       y: this.refs.y.value
     });
   };
@@ -21,7 +20,6 @@ class App extends React.Component {
     const {x, y} = this.state;
     return (
       <div className="App">
-        <p>Input x:</p>
         <InputX ref={component => this.x = component} onChange={this.displayInputValues}/>
         <hr/>
         <p>Input y:</p>
