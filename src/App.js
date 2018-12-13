@@ -1,31 +1,32 @@
 import React from 'react';
 import './App.css';
-import Profile from "./Profile";
-import Occupation from "./Occupation";
 
 class App extends React.Component {
 
   state = {
-    hobby: 'do nothing'
+    x: '',
+    y: ''
   };
 
-  changeHobby = () => {
-    const {hobby} = this.state;
+  displayInputValues = (e) => {
     this.setState({
-      hobby: hobby === 'do nothing' ? 'run away from reality' : 'do nothing'
+      x: e.target.value,
+      y: e.target.value
     });
-
-    // empty object passed in setState parameter also cause re-render
-    // this.setState({});
   };
 
   render() {
-    console.log('rendered App.js');
+    const {x, y} = this.state;
     return (
       <div className="App">
-        <Profile name={'Sidki'} greeting={'Hello World!'} hobby={this.state.hobby} onChangeHobby={this.changeHobby}>
-          <Occupation industry={'Steel Manufacturer'}/>
-        </Profile>
+        <p>Input x:</p>
+        <input onChange={this.displayInputValues}/>
+        <hr/>
+        <p>Input y:</p>
+        <input onChange={this.displayInputValues}/>
+        <hr/>
+        <h3>{`Value of state x = ${x}`}</h3>
+        <h3>{`Value of state y = ${y}`}</h3>
       </div>
     );
   }
