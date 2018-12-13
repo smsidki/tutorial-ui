@@ -1,26 +1,23 @@
 import React from 'react';
 import './App.css';
-import Counter from './Counter';
-import ReactDOM from 'react-dom'
+import Mature from "./Mature";
 
 class App extends React.Component {
 
-  mountCounter = () => {
-    ReactDOM.render(<Counter/>, document.getElementById('counter'))
-  };
+  state = {age: 0};
 
-  unmountCounter = () => {
-    ReactDOM.unmountComponentAtNode(document.getElementById('counter'))
+  verifyAge = () => {
+    this.setState({age: Number(this.refs.age.value) || 0});
   };
 
   render() {
     return (
       <div className="App">
-        <button onClick={this.mountCounter}>Mount counter</button>
+        <Mature age={this.state.age}/>
+        I am <input ref={'age'}/> years old.
         <br/>
-        <button onClick={this.unmountCounter}>Unmount counter</button>
-        <hr/>
-        <div id={'counter'}/>
+        <br/>
+        <button onClick={this.verifyAge}>Verify</button>
       </div>
     );
   }
