@@ -22,8 +22,7 @@ class App extends React.Component {
     console.log('rendered App.js');
     return (
       <div className="App">
-        <Profile name={'Sidki'} greeting={'Hello World!'} hobby={this.state.hobby}/>
-        <button onClick={this.changeHobby}>Change hobby</button>
+        <Profile name={'Sidki'} greeting={'Hello World!'} hobby={this.state.hobby} onChangeHobby={this.changeHobby}/>
       </div>
     );
   }
