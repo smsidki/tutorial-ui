@@ -8,10 +8,10 @@ class App extends React.Component {
     y: ''
   };
 
-  displayInputValues = (e) => {
+  displayInputValues = () => {
     this.setState({
-      x: e.target.value,
-      y: e.target.value
+      x: this.refs.x.value,
+      y: this.refs.y.value
     });
   };
 
@@ -20,10 +20,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <p>Input x:</p>
-        <input onChange={this.displayInputValues}/>
+        <input ref={'x'} onChange={this.displayInputValues}/>
         <hr/>
         <p>Input y:</p>
-        <input onChange={this.displayInputValues}/>
+        <input ref={'y'} onChange={this.displayInputValues}/>
         <hr/>
         <h3>{`Value of state x = ${x}`}</h3>
         <h3>{`Value of state y = ${y}`}</h3>
