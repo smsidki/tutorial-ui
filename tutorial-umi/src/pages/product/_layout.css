@@ -1,0 +1,7 @@
+.box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
