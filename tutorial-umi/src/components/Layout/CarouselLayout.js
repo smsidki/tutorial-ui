@@ -5,7 +5,7 @@ import styles from './CarouselLayout.css';
 
 class CarouselLayout extends React.Component {
 
-  imageSources = [
+  imageSources = this.props.children.props.route.imageSources || [
     'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//105/MTA-2594787/samsung_samsung-ua43nu7090kpxd-smart-tv-led--43-inch-_full03.jpg?output-format=webp',
     'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//81/MTA-2603023/dc_dc-chalked-steel-heather-tas-ransel-pria---gray--up-m-bkpk-_full02.jpg?output-format=webp',
     'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//93/MTA-1391619/brica_brica-b-pro-5-alpha-edition-mark-ii-ae2-combo-extreme-paket-action-camera---silver_full05.jpg?output-format=webp',

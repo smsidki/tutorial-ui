@@ -1,6 +1,6 @@
 export default (props) => (
   <div>
-    {'Other Layout . . .'}
+    {props.children.props.route.x}
     {props.children}
   </div>
 );

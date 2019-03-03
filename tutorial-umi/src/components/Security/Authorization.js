@@ -3,8 +3,8 @@ import Forbidden from '@/components/Security/Forbidden';
 export default (props) => {
 
   // Mock role, get it from server or token
-  //const userRoles = ['user', 'manager'];  // allowed
-  const userRoles = ['user'];               // forbidden
+  // const userRoles = ['user', 'manager'];   // allowed
+  const userRoles = ['user'];                 // forbidden
 
   const {children} = props;
 

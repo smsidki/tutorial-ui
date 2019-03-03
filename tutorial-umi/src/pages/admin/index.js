@@ -1,7 +1,9 @@
 /**
- * roles: ['admin', 'manager']
+ * roles:
+ *   - admin
+ *   - manager
  * Routes:
- *   - ./src/components/Security/AuthorizationRoute.js
+ *   - ./src/components/Security/Authorization.js
  */
 
 export default () => <div>Admin page</div>;
