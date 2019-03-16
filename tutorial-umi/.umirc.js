@@ -1,5 +1,5 @@
-
 // ref: https://umijs.org/config/
+// noinspection RegExpSingleCharAlternation, SpellCheckingInspection
 export default {
   treeShaking: true,
   plugins: [
